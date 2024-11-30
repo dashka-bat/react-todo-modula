@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-
+import "./style.css"
 export default function Page() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -12,32 +12,29 @@ export default function Page() {
   };
   return (
     <div>
-      <button onClick={openModal}>add</button>
+      <button className="Add-button" onClick={openModal}>add</button>
       {isOpen && (
         <div
-          style={{
-            height: "100vh",
-            backgroundColor: "rgba(0,0,0,0.5)",
-            alignContent: "center",
-          }}
         >
           <div
             style={{
               height: 500,
               width: 800,
-              backgroundColor: "white",
+              backgroundColor: "gray",
               borderRadius: 16,
               margin: "auto",
-              padding: 48,
+              padding: 48,color:"pink"
             }}
           >
-            <button onClick={closeModal}>close</button>
+            <button onClick={closeModal}>X</button>
             <input
               style={{
+                border:"2px solid black",
                 width: 256,
                 height: 56,
                 border: "1px solid black",
                 padding: 4,
+                color:"black"
               }}
               placeholder="task"
             ></input>
